@@ -1,0 +1,31 @@
+.nav{
+    width: 90%;
+    margin: auto;
+    border: solid;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bolder;
+    font-size: x-large;
+    
+}
+.menu-bloc{
+    display: flex;
+
+}
+.link-nav{
+    
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+    
+}
+
+.logo-bloc{
+    width: 20%;
+    margin-left: -30px;
+}
+.logo{
+    width: 200px;
+
+}
+

@@ -1,0 +1,17 @@
+.banner-bloc{
+    border: solid;
+    width: 90%;
+    height: 200px;
+    margin: auto;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+
+}
+
+.banner-title{
+    font-size: xx-large;
+    color: white;
+}
