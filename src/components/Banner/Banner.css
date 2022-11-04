@@ -1,17 +1,33 @@
 .banner-bloc{
-    border: solid;
+   
     width: 90%;
-    height: 200px;
+    height: 250px;
     margin: auto;
-    border-radius: 30px;
+    border-radius: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    position: relative;
+    
+    
 
 }
-
+.bloc-img{
+    position: absolute;
+    width: 100%;
+    height: 250px;
+    border-radius: 25px;
+    
+}
+.imgBanner{
+   
+    width: 100%;
+    height: 250px;
+    border-radius: 25px;
+   
+}
 .banner-title{
+    z-index: 1;
     font-size: xx-large;
     color: white;
 }

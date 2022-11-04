@@ -1,7 +1,8 @@
-.nav{
+.header{
     width: 90%;
     margin: auto;
-    border: solid;
+    margin-bottom: 60px;
+    margin-top: 30px;
     display: flex;
     justify-content: space-between;
     font-weight: bolder;
@@ -17,15 +18,23 @@
     display: flex;
     align-items: center;
     margin-left: 50px;
-    
+   
 }
-
+.none{
+    text-decoration: none;
+    color: #FF6060;
+}
+.none:hover{
+    text-decoration: underline;
+}
 .logo-bloc{
     width: 20%;
+    height: 65px;
     margin-left: -30px;
+    
 }
 .logo{
-    width: 200px;
-
+    width: 150px;
+    height: 65px;
 }
 

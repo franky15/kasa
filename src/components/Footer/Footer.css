@@ -1,0 +1,35 @@
+.bloc-footer{
+    width: 90%;
+    height: 200px;
+    margin: auto;
+    margin-top: 50px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid;
+}
+.logo{
+    
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+.imgFooter{
+    width: 150px;
+    height: 40px;
+}
+.logocopywrite{
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+}
+.copywrite{
+    width: 513px;
+    height: 30px;
+}

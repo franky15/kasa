@@ -1,52 +1,50 @@
 
 
 .bloc-produits{
-    
-    
     width: 90%;
     margin: auto;
     margin-top: 50px;
     padding-top: 10px;
     height: auto;
-    border-radius: 30px;
+    border-radius: 25px;
     background-color: rgb(246, 246, 246);
 
 }
 .sous-bloc-produits{
-    border: solid red;
-    width: 90%;
+    
+    width: 97%;
     margin: auto;
     margin-top: 50px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
     
 }
 .produits{
     display: block;
     width: 30%;
-    height: 300px;
-    border-radius: 20px;
+    height: 350px;
+    border-radius: 10px;
     position: relative;
     margin-bottom: 50px;
-    border: solid;
+    
     
 }
 .image-produit{
     width: 100%;
-    height: 250px;
+    height: 100%
 }
 .img-nav{
     width: 100%;
-    height: 300px;
-    border-radius: 20px;
+    height: 100%;
+    border-radius: 10px;
     
 }
 .title-produit{
     width: 100%;
-    border: solid yellow;
+   
     position: absolute;
-    top: 250px;
+    top: 280px;
     color: white;
 }
 
