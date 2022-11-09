@@ -1,0 +1,10 @@
+.button-droit{
+    border: solid;
+    background-color: red;
+    position: relative;
+}
+.button-gauche{
+    border: solid;
+    background-color: pink;
+    position: relative;
+}
