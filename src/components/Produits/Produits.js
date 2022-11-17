@@ -9,18 +9,15 @@ export default function Produits(){
         <div className="bloc-produits" >
             <div className="sous-bloc-produits">
                 {data.map((produit, index) => (  
-                        <a className="produits" key={produit.id} href={`/produits/${produit.id}`}>
-                            <div className="image-produit"> 
-                                <img src={produit.cover} className="img-nav"/>
-                            </div>
-                            <div className="title-produit">
-                                <h4>{produit.title}</h4>
-                            </div>
-                        </a>
-                    )
-
-                )}
-                        
+                    <a className="produits" key={produit.id} href={`/produits/${produit.id}`}>
+                        <div className="image-produit"> 
+                            <img src={produit.cover} className="img-nav"/>
+                        </div>
+                        <div className="title-produit">
+                            <h4>{produit.title}</h4>
+                        </div>
+                    </a>)) 
+                }     
             </div>
         </div>
     )

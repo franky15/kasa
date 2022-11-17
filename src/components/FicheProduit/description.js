@@ -1,7 +1,10 @@
 import button from "../../assets/button.png"
+
+import styled from "styled-components"
 import "./Description.css"
 
 export default function Description({tableObjet}){
+
     const descriptionTable = []
     const equipementTable = []
 
@@ -10,24 +13,42 @@ export default function Description({tableObjet}){
 
     //récupération du tableau d'equipements
     {tableObjet.forEach((item, index) => equipementTable.push(item.equipments))}
-    //console.log(equipementTable)
-    //console.log(descriptionTable)
+    
+    
+
+    //utilisation du styled components
+    const titre = styled.h1`
+    
+    color: blue;
+    
+    `
 
      return(
+        <titre>je suis testeur</titre>,
         <div className="bloc-description">
+             
             <div className="groupe-description">
-                <p className="description">Description</p>
-                <div className="bouton"><img  src={button} className="img-bouton"/></div>
-                <div className="on-off1">
-                    {descriptionTable.map((item, index) =>  <p key={`{index}-{item}`}>{item}</p> )}
+                <div className="bloc-descriptionTitle">
+                    <p className="description-title">Description</p>
+                    <div className="bouton-description">
+                        <img  src={button} className="img-bouton1"/>
+                    </div>
+                </div>
+                
+                <div className="on-off1-description"
+                    
+                >
+                    {descriptionTable.map((item, index) =>  <p key={`${index}-${item}`} className="descrip1-img">{item}</p> )}
                 
                 </div>
             </div>
             <div className="groupe-description">
-                <p className="description">Description</p>
-                <div className="bouton"><img  src={button} className="img-bouton"/></div>
-                <div className="on-off2">
-                    {equipementTable.map((item, index )=> <p key={`{index}-{item}`}>{item}</p> )}
+                <div className="bloc-descriptionTitle">
+                    <p className="description-title">Equipements</p>
+                    <div className="bouton-description"><img  src={button} className="img-bouton"/></div>
+                </div>
+                <div className="on-off2-description">
+                    {equipementTable[0].map((item, index )=> <p key={`${index}-${item}`}>{item}</p> )}
                       
                 </div>
             </div>
@@ -35,6 +56,11 @@ export default function Description({tableObjet}){
      )
 }
 
+
+/*<div className="bouton-description">
+                        <crochet></crochet><img  src={button} className="img-bouton1"/></crochet>
+                    </div>
+*/
 /* 
 <div className="bloc-description">
     <div className="groupe-description">

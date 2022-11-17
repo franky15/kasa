@@ -4,6 +4,8 @@ import {useParams} from "react-router-dom"
 import TagProduit from "./Tag.js";
 import Description from "./description.js";
 import Gallerie from "./Gallerie.js";
+import "./FicheProduit.css"
+import Footer from "../Footer/Footer.js";
 
 
 export default function FicheProduit(){
@@ -16,24 +18,33 @@ export default function FicheProduit(){
     
     return(
        
-        <div>
+        <div className="container-ficheProduit">
            {table.map((produit, index) => (
-            <div>
-                <Gallerie tableObjet = {table} />
-               
-                <div className="title-bloc">
-                    <h1>{produit.title}</h1>
-                    <p>{produit.host.name}</p>
-                    <div><img src={produit.host.picture} className="img-hote" alt="image de l'hote" key={`{index}-{produit}`}/></div>
+            <div className="sous-container-ficheProduit">
+                <div className="gallerie-ficheProduit">
+                    <Gallerie tableObjet = {table} />
                 </div>
-                <div className="location">{produit.location}</div>
-                <TagProduit tableObjet = {table} />
-                <Description tableObjet = {table} />
+                <div className="title-blocFicheProduit">
+                    <h1 className="title-ficheProduit">{produit.title}</h1>
+                    <div className="blocUser-ficheProduit">
+                        <p className="name-ficheProduit">{produit.host.name}</p>
+                        <div className="img-ficheProduit" style={{backgroundImage: `url(${produit.host.picture})`}}></div>
+                    </div>
+                </div>
+                <div className="location-ficheProduit">
+                    {produit.location}
+                </div>
+                <div className="tagProduit-ficheProduit">
+                    <TagProduit tableObjet = {table} />
+                </div>
+                <div className="description-ficheProduit"> 
+                    <Description tableObjet = {table} />
+                </div>
                 
-               
             </div>
             ))}
         </div>
         
     )
 }
+//<img src={produit.host.picture} className="img-hote" alt="image de l'hote" key={`{index}-{produit}`}/> ligne30

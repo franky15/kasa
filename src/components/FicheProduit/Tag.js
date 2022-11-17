@@ -3,10 +3,11 @@ import "./Tag.css"
 
 export default function TagProduit({tableObjet}){
 
-    const tag = [];
+    const allTag = [];
     const notes = []
     var note = 0 ;
-    {tableObjet.forEach((itemp) => (tag.push(itemp.tags)))}
+    {tableObjet.forEach((itemp) => (allTag.push(itemp.tags)))}
+    console.log(allTag[0])
      {tableObjet.forEach((star) => (notes.push(star.rating)))}
     
     //conversion de la note en entier
@@ -19,23 +20,25 @@ export default function TagProduit({tableObjet}){
     
     return(
         
-        <div>
+        <div className="bloc-all-tag">
             <div className="all-tag">
                 
-                {tag.map((tags, index) => (
-                    <div className="oneTag" key={`{index}-{tags}`}>{tags}</div>
+                {allTag[0].map((itemTags, index) => (
+                    <div className="oneTag" key={`${index}-${itemTags}`}>
+                         {itemTags} 
+                    </div>
                     
                 ))}
             </div>
             <div className="all-star">
                 {noteImg.slice(5 - note ).map((itemp,index) => 
                     
-                    <span><img src={itemp} className="img-star" alt="etoile" key={`{index}-{itemp}`}/></span>
+                    <span><img src={itemp} className="img-star" alt="etoile" key={`${index}-${itemp}`}/></span>
                     
                 )}
                  
                 {noteBack.slice(note ).map((itempColor,index) => 
-                     <span><img src={itempColor} className="img-star2" alt="etoile" key={`{index}-{itempColor}`}/></span>
+                     <span><img src={itempColor} className="img-star2" alt="etoile" key={`${index}-${itempColor}`}/></span>
                 )}
                 
               

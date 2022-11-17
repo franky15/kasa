@@ -2,13 +2,15 @@ import React from "react";
 import Produits from "../Produits/Produits";
 import Banner from "../Banner/Banner";
 import Footer from "../Footer/Footer";
+import "./Home.css"
 
 export default function Home(){
     return(
-        <div>
+        <div className="container-home">
             <Banner/>
             <Produits/>
-            <Footer/>
+            
         </div>
     )
 }
+//<Footer/>

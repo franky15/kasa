@@ -4,6 +4,7 @@ import FicheProduit from "./components/FicheProduit/FicheProduit";
 import Home from "./components/Home/Home";
 import Nav from "./components/nav/nav";
 import PageErreur from "./components/PageErreur/PageErreur";
+import Footer from "./components/Footer/Footer";
 
 
 
@@ -18,6 +19,7 @@ function App() {
         <Route path="*" element={<PageErreur/>} />
         
       </Routes>
+      <Footer/>
     </div>
   );
 }
