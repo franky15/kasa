@@ -3,6 +3,7 @@ import button from "../../assets/button.png"
 import styled from "styled-components"
 import "./Description.css"
 
+ 
 export default function Description({tableObjet}){
 
     const descriptionTable = []
@@ -14,14 +15,12 @@ export default function Description({tableObjet}){
     //récupération du tableau d'equipements
     {tableObjet.forEach((item, index) => equipementTable.push(item.equipments))}
     
-    
-
     //utilisation du styled components
-    const titre = styled.h1`
-    
-    color: blue;
-    
-    `
+ const btn1 = styled.div`
+    border: solid blue;
+`
+
+   
 
      return(
         <titre>je suis testeur</titre>,
@@ -30,8 +29,10 @@ export default function Description({tableObjet}){
             <div className="groupe-description">
                 <div className="bloc-descriptionTitle">
                     <p className="description-title">Description</p>
-                    <div className="bouton-description">
-                        <img  src={button} className="img-bouton1"/>
+                    <div className="bouton-description1">
+                        <btn1>
+                            <img  src={button} className="img-bouton1"/>
+                        </btn1>
                     </div>
                 </div>
                 

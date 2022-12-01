@@ -18,6 +18,7 @@
    justify-content: space-between;
    
 }
+
 .description-title{
     color: white;
     width: 70%;
@@ -28,7 +29,7 @@
     margin-left: 20px;
     
 }
-.bouton-description{
+.bouton-description1{
     height: 42px;
     position: relative;
     margin-right: 10px;
@@ -37,13 +38,24 @@
     align-items: center;
     justify-content: center;
 
+    transform: rotate(180deg);
+    transition-duration: 1s;
+
     border: solid ;
    
 }
-.img-bouton{
-    transform: rotate(180deg);
+.bloc-descriptionTitle ~ div {
+    border: solid blue;
+}
+.bouton-description1:hover{
+    transform: rotate(-1deg);
+}
+.bloc-descriptionTitle:hover + .on-off1-description{
+    transform: scaleY(1);
 }
 .on-off1-description{
+    transform: scaleY(0);
+    transition-duration: 1s;
     margin-top: -5px;
     color: #FF6060;
     background-color: #F6F6F6;
