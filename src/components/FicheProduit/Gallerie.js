@@ -1,6 +1,6 @@
 import button from "../../assets/button.png"
 import React, { useState } from "react"
-import "./Gallerie.css"
+import "./Gallerie.scss"
 
 export default function Gallerie({tableObjet}){
     const imgTable = []

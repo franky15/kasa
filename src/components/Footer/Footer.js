@@ -1,7 +1,7 @@
 import React from "react";
 import imgFooter from "../../assets/LOGOFOOTER.png"
 import copywrite from "../../assets/copywrite.png"
-import "./Footer.css"
+import "./Footer.scss"
 
 
 export default function Footer(){

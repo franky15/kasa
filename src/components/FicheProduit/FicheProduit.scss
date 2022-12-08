@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;700&display=swap');
+
+*{
+    font-family: 'Montserrat', sans-serif;
+    
+}
 .sous-container-ficheProduit{
    
     margin: auto;
@@ -13,7 +19,7 @@
     align-items: center;
     color: #FF6060;
 
-    border: solid;
+    //border: solid;
 }
 .title-ficheProduit{
     

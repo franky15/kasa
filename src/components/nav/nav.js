@@ -1,7 +1,7 @@
 import React from "react";
 import {Link} from "react-router-dom"
 import logo from "../../assets/logo.png"
-import "./Nav.css"
+import "./Nav.scss"
 
 export default function Nav(){
     return(

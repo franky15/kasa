@@ -1,6 +1,6 @@
 import React from "react";
 import {data} from "../../Data.js";
-import "./Produits.css"
+import "./Produits.scss"
 
 
 export default function Produits(){

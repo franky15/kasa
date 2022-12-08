@@ -1,8 +1,16 @@
-.container{
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;700&display=swap');
+
+.containerApropos{
+    font-family: 'Montserrat', sans-serif;
+    
+}
+.containerError{
     width: 80%;
     margin: auto;
     margin-top: 50px;
     color: #FF6060;
+    display: flex;
+    flex-direction: column;
 }
 .error{
     margin-top: -10px;

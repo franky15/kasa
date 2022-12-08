@@ -1,5 +1,5 @@
 import star from "../../assets/star.png"
-import "./Tag.css"
+import "./Tag.scss"
 
 export default function TagProduit({tableObjet}){
 

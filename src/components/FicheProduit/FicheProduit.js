@@ -4,7 +4,7 @@ import {useParams} from "react-router-dom"
 import TagProduit from "./Tag.js";
 import Description from "./description.js";
 import Gallerie from "./Gallerie.js";
-import "./FicheProduit.css"
+import "./FicheProduit.scss"
 import Footer from "../Footer/Footer.js";
 
 
