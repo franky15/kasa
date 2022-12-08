@@ -1,10 +1,11 @@
 import button from "../../assets/button.png"
 
-import styled from "styled-components"
-import "./Description.css"
+//import styled from "styled-components"
+//import "./Description.css"
+//import "./description.scss"
 
  
-export default function Description({tableObjet}){
+export default function Description({tableObjet}){ 
 
     const descriptionTable = []
     const equipementTable = []
@@ -16,44 +17,39 @@ export default function Description({tableObjet}){
     {tableObjet.forEach((item, index) => equipementTable.push(item.equipments))}
     
     //utilisation du styled components
- const btn1 = styled.div`
+ /*const btn1 = styled.div`
     border: solid blue;
-`
+`*/
 
    
 
      return(
-        <titre>je suis testeur</titre>,
-        <div className="bloc-description">
+        <div className="container">
              
-            <div className="groupe-description">
-                <div className="bloc-descriptionTitle">
-                    <p className="description-title">Description</p>
-                    <div className="bouton-description1">
-                        <btn1>
-                            <img  src={button} className="img-bouton1"/>
-                        </btn1>
-                    </div>
-                </div>
-                
-                <div className="on-off1-description"
-                    
-                >
-                    {descriptionTable.map((item, index) =>  <p key={`${index}-${item}`} className="descrip1-img">{item}</p> )}
-                
+        <div className="sous-container">
+            <div className="bloc1">
+                <p className="bloc1__description">Description</p>
+                <div className="bloc1__bouton1">
+                    <img  src={button} className="bouton__img"/>
                 </div>
             </div>
-            <div className="groupe-description">
-                <div className="bloc-descriptionTitle">
-                    <p className="description-title">Equipements</p>
-                    <div className="bouton-description"><img  src={button} className="img-bouton"/></div>
-                </div>
-                <div className="on-off2-description">
-                    {equipementTable[0].map((item, index )=> <p key={`${index}-${item}`}>{item}</p> )}
-                      
-                </div>
+            <div className="bloc1__on-off1">
+                {descriptionTable.map((item, index) =>  <p key={`${index}-${item}`} className="descrip1-img">{item}</p> )}
             </div>
         </div>
+        <div className="sous-container">
+            <div className="bloc2">
+                <p className="bloc2__description">Equipements</p>
+                <div className="bloc2__bouton2">
+                    <img  src={button} className="bouton__img"/>
+                </div>
+            </div>
+            <div className="bloc2__on-off2">
+                {equipementTable[0].map((item, index )=> <p key={`${index}-${item}`}>{item}</p> )}
+                  
+            </div>
+        </div>
+    </div>
      )
 }
 
