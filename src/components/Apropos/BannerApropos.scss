@@ -7,7 +7,7 @@
 
 .bannerApropos{
    
-    width: 100%;
+    width: 90%;
     height: 250px;
     margin: auto;
     border-radius: 25px;
@@ -15,6 +15,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    filter : brightness(50%); //assombrissement du bloc
     
     &__img{
         position: absolute;
@@ -43,16 +44,17 @@
     font-size: 15px;
     .bloc{
         height: auto;
-        margin-bottom: 20px;
+        margin-top: 50px;
+        margin-bottom: 50px;
     }
     
 }
 
 //css de la fiabilité
 .bloc{
+    margin-bottom: 100px;
 
-
-    .blocFiabilite{
+    .bloc-elements{
         height: 52px;
         background-color: #FF6060;
         color: white;
@@ -72,29 +74,15 @@
             align-items: center;
             justify-content: center;
             transform: rotate(180deg);
-            transition-duration: 400ms;
-        
             //border: solid blue;
         
         };
-        &:hover{
-            .blocFiabilite__bouton{
-                transform: rotate(-1deg);
-            }
-        };
-        
-        &:hover + .bloc__contenuFiabilite{
-                transform: scaleY(1);
-                
-            
-        };
+       
+     
     
     }
     .bloc__contenuFiabilite{
         
-        transform: scaleY(0);
-        transform-origin: 0% 0%;
-        transition-duration: 400ms;
         margin-top: -3px;
         color: #FF6060;
         background-color: #F6F6F6;
@@ -119,7 +107,8 @@
        
 
 };
-
+    
+   /*
 //css Respect
 .bloc{
 
@@ -405,3 +394,4 @@
     }
 };
 
+*/

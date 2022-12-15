@@ -14,7 +14,7 @@ export default function Produits(){
                             <img src={produit.cover} className="img-nav"/>
                         </div>
                         <div className="title-produit">
-                            <h4>{produit.title}</h4>
+                            <h4 className="title-item">{produit.title}</h4>
                         </div>
                     </a>)) 
                 }     

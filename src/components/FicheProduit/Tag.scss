@@ -9,15 +9,15 @@
 }
 
 .all-tag{
-   // border: solid;
+    //border: solid;
     width: auto;
     display: flex;
     justify-content: space-between;
 }
 .oneTag{
     color: white;
-    height: 25px;
     width: auto;
+    height: 30px;
     background-color: #FF6060;
     margin-right: 10px;
     border-radius: 10px;
@@ -26,6 +26,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .img-star{

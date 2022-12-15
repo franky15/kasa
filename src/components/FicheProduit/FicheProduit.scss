@@ -35,17 +35,23 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    .name-ficheProduit{
+        
+       width: min-content;
+    }
+    .img-ficheProduit{
+    
+        width: 150px;
+        height: 150px;
+        border-radius: 75px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        
+    }
    
 }
-.img-ficheProduit{
-    
-    width: 150px;
-    height: 150px;
-    border-radius: 100px;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-}
+
 .location-ficheProduit{
     width: 90%;
     margin: auto;
