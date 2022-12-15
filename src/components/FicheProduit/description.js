@@ -1,4 +1,6 @@
 import button from "../../assets/button.png"
+import DescriptionHidden from "./FonctionDescription"
+import EquipementsHidden from "./FonctionEquipements"
 
 //import styled from "styled-components"
 //import "./Description.css"
@@ -21,13 +23,9 @@ export default function Description({tableObjet}){
     border: solid blue;
 `*/
 
-   
+   /*
 
-     return(
-        <div className="container">
-             
-        <div className="sous-container">
-            <div className="bloc1">
+   <div className="bloc1">
                 <p className="bloc1__description">Description</p>
                 <div className="bloc1__bouton1">
                     <img  src={button} className="bouton__img"/>
@@ -36,20 +34,18 @@ export default function Description({tableObjet}){
             <div className="bloc1__on-off1">
                 {descriptionTable.map((item, index) =>  <p key={`${index}-${item}`} className="descrip1-img">{item}</p> )}
             </div>
-        </div>
-        <div className="sous-container">
-            <div className="bloc2">
-                <p className="bloc2__description">Equipements</p>
-                <div className="bloc2__bouton2">
-                    <img  src={button} className="bouton__img"/>
-                </div>
+   */
+
+     return(
+        <div className="container">
+             
+            <div className="sous-container">
+                <DescriptionHidden tableObjet = {tableObjet}/>
             </div>
-            <div className="bloc2__on-off2">
-                {equipementTable[0].map((item, index )=> <p key={`${index}-${item}`}>{item}</p> )}
-                  
+            <div className="sous-container">
+                <EquipementsHidden tableObjet = {tableObjet}/>
             </div>
         </div>
-    </div>
      )
 }
 
@@ -69,4 +65,21 @@ export default function Description({tableObjet}){
         <div className="bouton"><img className="img-bouton"/></div>
     </div>
 </div>
+*/
+
+
+/*
+<div className="sous-container">
+            <div className="bloc2">
+                <p className="bloc2__description">Equipements</p>
+                <div className="bloc2__bouton2">
+                    <img  src={button} className="bouton__img"/>
+                </div>
+            </div>
+            <div className="bloc2__on-off2">
+                {equipementTable[0].map((item, index )=> <p key={`${index}-${item}`}>{item}</p> )}
+                  
+            </div>
+        </div>
+
 */
