@@ -22,4 +22,3 @@ export default function Produits(){
         </div>
     )
 }
-//{tableId.map((productId) => productId == produit.id && href="/produit/{productId}")}
