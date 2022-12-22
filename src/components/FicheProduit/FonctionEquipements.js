@@ -27,7 +27,7 @@ export default function EquipementsHidden({tableObjet}){
                         <div className="bloc2" onClick={change2}>
                             <p className="bloc2__description">Equipements</p>
                             <div className="bloc2__bouton2">
-                                <img  src={button} className="bouton__img" />
+                                <img  src={button} className="bouton__img change-angle"  />
                             </div>
                         </div>
                         <div className="bloc2__on-off2">

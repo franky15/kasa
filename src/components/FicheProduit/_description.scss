@@ -1,9 +1,25 @@
+@mixin tablette-only {
+    @media screen  and (min-width: 768px){
+        @content;
+    }
+}
+
+
+@mixin mobile-only {
+    @media screen  and (max-width: 767px){
+        @content;
+    }
+}
+
 .container{
     
     width: 90%;
     margin: auto;
     display: flex;
     justify-content: space-between;
+    @include tablette-only{
+
+    }
 
 }
 
@@ -51,5 +67,8 @@
     align-items: center;
     margin-left: 20px;
    
+}
+.change-angle{
+    transform: rotate(180deg);
 }
 
