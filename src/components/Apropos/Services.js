@@ -21,7 +21,7 @@ export default function Service(){
                         </div>
                     </div>
                     <div className="bloc__contenuFiabilite">
-                        <p className="description">nos services</p>
+                        <p className="description">La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.</p>
                     </div>
                 </div>
             ) : (

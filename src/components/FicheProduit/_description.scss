@@ -1,5 +1,5 @@
 @mixin tablette-only {
-    @media screen  and (min-width: 768px){
+    @media screen  and (max-width: 900px){
         @content;
     }
 }
@@ -48,6 +48,10 @@
    
    
    };
+
+   @include tablette-only{
+        height: 40px;
+   }
    
 }
 .bloc2__on-off2{
@@ -65,10 +69,25 @@
     font-size: 18px;
     display: flex;
     align-items: center;
-    margin-left: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    
+    
+    @include mobile-only() {
+        font-size: 15px;
+    }
+}
+
+.bouton__img{
    
+    @include mobile-only() {
+        width: 20px;
+    }
 }
 .change-angle{
     transform: rotate(180deg);
 }
+
+
+
 

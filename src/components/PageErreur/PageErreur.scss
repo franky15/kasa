@@ -1,3 +1,26 @@
+@mixin tablette-only {
+    @media screen  and (max-width: 900px){
+        @content;
+    }
+}
+
+
+
+@mixin mobile-only {
+    @media screen  and (max-width: 767px){
+        @content;
+    }
+}
+
+////////////////////////////////////
+//correction du 404
+@mixin centre1-only {
+    @media (max-width: 768px)  and (max-width: 1018px){
+        @content;
+    }
+}
+
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;700&display=swap');
 
 .containerApropos{
@@ -8,15 +31,26 @@
     width: 80%;
     margin: auto;
     margin-top: 50px;
+    margin-bottom: 144px;
     color: #FF6060;
     display: flex;
     flex-direction: column;
+    
 }
 .error{
-    margin-top: -10px;
-    font-size: 400px;
-    text-align: center;
    
+    margin-top: -10px;
+    font-size: 300px;
+    text-align: center;
+
+   //border: solid;
+   @include centre1-only {
+    font-size: 250px;
+   }
+   @include  mobile-only{
+    font-size: 100px;
+   }
+
 }
 .description{
     font-size: 30px;

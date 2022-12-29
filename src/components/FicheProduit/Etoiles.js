@@ -1,7 +1,7 @@
 import star from "../../assets/star.png"
-import "./Tag.scss"
+import "./Etoiles.scss"
 
-export default function TagProduit({tableObjet}){
+export default function EtoilesProduit({tableObjet}){
 
     const allTag = [];
     const notes = []
@@ -15,41 +15,13 @@ export default function TagProduit({tableObjet}){
    
 
    //tableau d'etoiles
-   /*
    const noteImg = Array(5).fill(star)
-   const noteBack = Array(5).fill(star)*/
+   const noteBack = Array(5).fill(star)
     
     return(
         
-        <div className="bloc-all-tag">
-            <div className="all-tag">
-                
-                {allTag[0].map((itemTags, index) => (
-                    <div className="oneTag" key={`${index}-${itemTags}`}>
-                         {itemTags} 
-                    </div>
-                    
-                ))}
-            </div>
+      
            
-        </div>
-
-    )
-}
-
-
-/*
-
-<div className="bloc-all-tag">
-            <div className="all-tag">
-                
-                {allTag[0].map((itemTags, index) => (
-                    <div className="oneTag" key={`${index}-${itemTags}`}>
-                         {itemTags} 
-                    </div>
-                    
-                ))}
-            </div>
             <div className="all-star">
                 {noteImg.slice(5 - note ).map((itemp,index) => 
                     
@@ -64,8 +36,9 @@ export default function TagProduit({tableObjet}){
               
                 
             </div>
-        </div>
+       
+
+    )
+}
 
 
-
-*/

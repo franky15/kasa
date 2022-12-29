@@ -1,3 +1,26 @@
+@mixin tablette-only {
+    @media screen  and (max-width: 900px){
+        @content;
+    }
+}
+
+
+@mixin mobile-only {
+    @media screen  and (max-width: 767px){
+        @content;
+    }
+}
+
+////////////////////////////////////////
+/// gestion du responsive de l'image en forme du cercle
+@mixin cercle-only {
+    @media (min-width: 903px)  and (max-width: 1145px){
+        @content;
+    }
+}
+
+//////entre 900 et 1000px problème cercle
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;700&display=swap');
 
 *{
@@ -9,58 +32,179 @@
     margin: auto;
     margin-top: -50px;
 }
-.title-blocFicheProduit{
+
+.container-info-produit{
+    
     width: 90%;
     margin: auto;
-    height: 150px;
     display: flex;
-    margin-top: 20px;
     justify-content: space-between;
-    align-items: center;
-    color: #FF6060;
-
+    margin-top: 50px;
     //border: solid;
-}
-.title-ficheProduit{
-    
-    font-weight: 500;
-    font-size: 36px;
-}
-.name-ficheProduit{
-    font-weight: 500;
-    font-size: 18px;
-}
-.blocUser-ficheProduit{
-    width: 15%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    .name-ficheProduit{
-        
-       width: min-content;
+
+    @include mobile-only{
+
+       // border: solid black;
+        display: flex;
+        flex-direction: column;
+       
     }
-    .img-ficheProduit{
+
+    .bloc-des-descriptions{
+        
+        margin-bottom: 20px;
+        //width: auto;
+
+        .title-ficheProduit{
+           // width: 60%;
+           margin-top: -5px;
+            width: auto;
+            font-weight: 500;
+            font-size: 36px;
+            color: #FF6060;
+
+           // border: solid blue;
+            @include tablette-only{
+                font-size: 20px;
+            }
+            
+        }
+        .location-ficheProduit{
+            width: auto;
+            margin: auto;
+            margin-bottom: 10px;
+            margin-top: -10px;
+            color: #FF6060;
+            font-weight: 500;
+            font-size: 18px;
+           
+           // border: solid;
+            @include tablette-only{
+                font-size: 13px;
+            }
+           
+        
+        }
+        .tagProduit-ficheProduit{
+            width: auto;
+            font-weight: 500;
+            font-size: 14px;
+        
+            
+        }
+        @include tablette-only{
+           // border: solid yellow;//////////////////////
+           
+        }
+    }
+
+
+    .bloc-proprio{
+
+       // border: solid red;
+        width: 15%;
+       
+       @include tablette-only{
+
+       // border: solid blue;
+        width: 15%;
+        
+        
+       }
+        @include mobile-only{
+
+            
+           // border: solid blue;
+            
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row-reverse;
+            
+            .etoiles-bloc{
+               // border: solid brown;
+            }
+           
+        }
+       
+       
+
+       
+        .blocUser-ficheProduit{
+            
+            //width: 17%;
+            display: flex;
+            justify-content: end; //space-between
+            align-items: center;
+            //width: 100%;
+           // border: solid;
+
+            @include tablette-only{
+                //width: 100%;
+               // border: solid brown;
+                
+                
+            }
+            @include mobile-only{
+                
+                //width: 17%;
+               // border: solid brown;
+                
+                
+            }
+
+            .name-ficheProduit{
+                width: min-content;
+                font-weight: 500;
+                font-size: 18px;
+                margin-right: 20px;
+                color: #FF6060;
+
+                @include tablette-only{
+
+                   
+                    font-size: 12px;
+                }
     
-        width: 150px;
-        height: 150px;
-        border-radius: 75px;
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
+            
+            }
+            
+            .img-ficheProduit{
+                
+                width: 80px;
+                height: 80px;
+                border-radius: 40px;
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+
+                @include cercle-only{
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 30px;
+                }
+
+                @include tablette-only{
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 30px;
+                }
+                
+                
+                
+            }
+        
+        }
+        .etoiles-bloc{
+            //border: solid yellow;
+           // width: 100%;
+        }
         
     }
-   
 }
 
-.location-ficheProduit{
-    width: 90%;
-    margin: auto;
-    color: #FF6060;
-    font-weight: 500;
-    font-size: 18px;
-}
-.tagProduit-ficheProduit{
-    
-    font-weight: 500;
-    font-size: 14px;
-}
+
+
+
+
+

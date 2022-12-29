@@ -21,7 +21,7 @@ export default function Fiabilite(){
                         </div>
                     </div>
                     <div className="bloc__contenuFiabilite">
-                        <p className="description">notre fiabilité</p>
+                        <p className="description">Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes.</p>
                     </div>
                 </div>
             ) : (

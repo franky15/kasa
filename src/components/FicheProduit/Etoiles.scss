@@ -1,0 +1,76 @@
+@mixin tablette-only {
+    @media screen  and (max-width: 900px){
+        @content;
+    }
+}
+
+
+@mixin mobile-only {
+    @media screen  and (max-width: 767px){
+        @content;
+    }
+}
+
+////////////////////////////////////////
+/// gestion du responsive des etoiles qui sortent du cadre
+@mixin etoiles-only {
+    @media (min-width: 903px)  and (max-width: 1145px){
+        @content;
+    }
+}
+
+
+
+
+.all-star{
+    //border: solid yellow;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+
+    @include tablette-only{
+       // border: solid brown;
+    }
+
+    /*
+    @include mobile-only{
+        
+        position: relative;
+        top: -20px;
+       left: -120px;
+
+    }
+    
+    
+    */
+}
+
+//etoiles rouges
+.img-star{
+
+    filter: invert(63%) sepia(31%) saturate(7313%) hue-rotate(324deg) brightness(107%) contrast(115%);
+    
+    @include etoiles-only {
+        width:23px;
+    }
+    @include tablette-only{
+        width: 15px;
+    }
+    
+    @include mobile-only{
+        width: 15px;
+    }
+}
+//etoiles grisées
+.img-star2{
+
+    @include etoiles-only {
+        width: 23px;
+    }
+
+    @include tablette-only{
+        width: 15px;
+    }
+
+    
+}
