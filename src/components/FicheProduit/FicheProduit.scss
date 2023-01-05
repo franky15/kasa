@@ -1,5 +1,5 @@
 @mixin tablette-only {
-    @media screen  and (max-width: 900px){
+    @media screen  and (max-width: 1000px){
         @content;
     }
 }
@@ -14,7 +14,7 @@
 ////////////////////////////////////////
 /// gestion du responsive de l'image en forme du cercle
 @mixin cercle-only {
-    @media (min-width: 903px)  and (max-width: 1145px){
+    @media (min-width: 768px) and (max-width: 1350px){
         @content;
     }
 }
@@ -30,7 +30,9 @@
 .sous-container-ficheProduit{
    
     margin: auto;
-    margin-top: -50px;
+    margin-top: -20px;
+    margin-bottom: 145px;
+    //border: solid;
 }
 
 .container-info-produit{
@@ -42,22 +44,36 @@
     margin-top: 50px;
     //border: solid;
 
+
+    @include tablette-only{
+
+         margin-bottom: 30px;
+         
+        
+     }
+
     @include mobile-only{
 
        // border: solid black;
         display: flex;
         flex-direction: column;
+        
        
     }
 
     .bloc-des-descriptions{
         
+       //border: solid red;
         margin-bottom: 20px;
         //width: auto;
+        @include tablette-only{
+            margin-bottom: 0px;
+            
+         }
 
         .title-ficheProduit{
            // width: 60%;
-           margin-top: -5px;
+          // margin-top: -5px;//
             width: auto;
             font-weight: 500;
             font-size: 36px;
@@ -65,7 +81,8 @@
 
            // border: solid blue;
             @include tablette-only{
-                font-size: 20px;
+                margin-bottom: 20px;
+                font-size: 12px;//20px;
             }
             
         }
@@ -101,13 +118,13 @@
 
     .bloc-proprio{
 
-       // border: solid red;
+       // border: solid  green;
         width: 15%;
        
        @include tablette-only{
 
        // border: solid blue;
-        width: 15%;
+       // width: 15%;
         
         
        }
@@ -137,7 +154,7 @@
             justify-content: end; //space-between
             align-items: center;
             //width: 100%;
-           // border: solid;
+          // border: solid yellow;
 
             @include tablette-only{
                 //width: 100%;
@@ -146,10 +163,13 @@
                 
             }
             @include mobile-only{
-                
+                margin-top: 20px;
+                margin-bottom: 20px;
+               // margin-bottom: 20px;
                 //width: 17%;
                // border: solid brown;
-                
+                position: relative;
+                top: 20px;
                 
             }
 
@@ -159,36 +179,59 @@
                 font-size: 18px;
                 margin-right: 20px;
                 color: #FF6060;
+                
+               @include cercle-only{
+                
+              // border: solid red;
+                margin-right: 5px;
+                font-size: 12px;
+            }
 
-                @include tablette-only{
+            @include mobile-only{
+                    
+                margin-right: 5px;
+                font-size: 12px;
+            }
 
-                   
-                    font-size: 12px;
-                }
+            
+         
     
             
             }
             
             .img-ficheProduit{
-                
+               // border: solid red;
                 width: 80px;
                 height: 80px;
-                border-radius: 40px;
+                //border-radius: 40px;
                 background-size: contain;
                 background-position: center;
                 background-repeat: no-repeat;
-
+                clip-path: circle();
+                
                 @include cercle-only{
+                    width: 80px;
+                     height: 80px;
+                     //border-radius: 32.5px;
+                     
+                     
+                     clip-path: circle();
+                     margin-right: 5px;
+                     font-size: 12px;
+                 }
+
+                 
+               @include mobile-only{
                     width: 60px;
                     height: 60px;
-                    border-radius: 30px;
+                   // border-radius: 30px;
+
+                    clip-path: circle();
+                    margin-right: 5px;
+                    font-size: 12px;
                 }
 
-                @include tablette-only{
-                    width: 60px;
-                    height: 60px;
-                    border-radius: 30px;
-                }
+               
                 
                 
                 
