@@ -1,7 +1,7 @@
 
 import React from "react"; //{useState}
 import "./BannerApropos.scss";
-import button from "../../assets/button.png";
+//import button from "../../assets/button.png";
 import imgBanner from "../../assets/IMG.png";
 import Fiabilite from "./Fiabilite";
 import Respect from "./Respect";

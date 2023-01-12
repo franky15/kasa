@@ -26,7 +26,7 @@ export default function Responsabilite(){
                 </div>
             ) : (
                 <div className="bloc-elements" onClick={change1}>
-                        <p className="bloc-elements__title">Responsabilité</p>
+                        <p className="bloc-elements__title">Sécurité</p>
                         <div className="bloc-elements__bouton">
                             <img  src={button} className="bouton__img"/>
                         </div>

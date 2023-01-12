@@ -1,17 +1,20 @@
 import star from "../../assets/star.png"
 import "./Etoiles.scss"
 
-export default function EtoilesProduit({tableObjet}){
+export default function EtoilesProduit({tableObjet}){ //{tableObjet} props
 
-    const allTag = [];
-    const notes = []
+    
     var note = 0 ;
-    {tableObjet.forEach((itemp) => (allTag.push(itemp.tags)))}
-    console.log(allTag[0])
+    
+   //const allTag = [];
+   const notes = []
+   //{tableObjet.forEach((itemp) => (allTag.push(itemp.tags)))}
+   // console.log(allTag[0])
+
      {tableObjet.forEach((star) => (notes.push(star.rating)))}
     
     //conversion de la note en entier
-    {notes.forEach(valeur => ( note = parseInt(valeur) ))}
+   {notes.forEach(valeur => ( note = parseInt(valeur) ))}
    
 
    //tableau d'etoiles
@@ -30,10 +33,8 @@ export default function EtoilesProduit({tableObjet}){
                 )}
                  
                 {noteBack.slice(note ).map((itempColor,index) => 
-                     <span><img src={itempColor} className="img-star2" alt="etoile" key={`${index}-${itempColor}`}/></span>
+                     <span><img src={itempColor} className="img-star2" alt="etoile" key={`${itempColor}-${index}`}/></span>
                 )}
-                
-              
                 
             </div>
        

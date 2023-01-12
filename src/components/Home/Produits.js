@@ -7,9 +7,9 @@ export default function Produits(){
     
     return(
         <div className="bloc-produits" >
-            <div className="sous-bloc-produits">
+            <div className="sous-bloc-produits"> 
                 {data.map((produit, index) => (  
-                    <a className="produits" key={produit.id} href={`/produits/${produit.id}`}>
+                    <a className="produits" key= { `${produit}-${index}` } href={`/produits/${produit.id}`}>
                         <div className="image-produit"> 
                             <img src={produit.cover} className="img-nav"/>
                         </div>

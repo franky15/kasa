@@ -4,6 +4,10 @@ import Banner from "../Banner/Banner";
 import "./Home.scss"
 
 export default function Home(){
+
+
+
+    
     return(
         <div className="container-home">
             <Banner/>

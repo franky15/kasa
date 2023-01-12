@@ -1,4 +1,4 @@
-import button from "../../assets/button.png"
+//import button from "../../assets/button.png"
 import DescriptionHidden from "./FonctionDescription"
 import EquipementsHidden from "./FonctionEquipements"
 

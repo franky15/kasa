@@ -1,17 +1,19 @@
-import star from "../../assets/star.png"
+//import star from "../../assets/star.png"
 import "./Tag.scss"
 
 export default function TagProduit({tableObjet}){
 
     const allTag = [];
-    const notes = []
-    var note = 0 ;
+    //const notes = []
+    //var note = 0 ;
+
     {tableObjet.forEach((itemp) => (allTag.push(itemp.tags)))}
     console.log(allTag[0])
-     {tableObjet.forEach((star) => (notes.push(star.rating)))}
+
+     //{tableObjet.forEach((star) => (notes.push(star.rating)))}
     
     //conversion de la note en entier
-    {notes.forEach(valeur => ( note = parseInt(valeur) ))}
+    //{notes.forEach(valeur => ( note = parseInt(valeur) ))}
    
 
    //tableau d'etoiles
@@ -25,7 +27,7 @@ export default function TagProduit({tableObjet}){
             <div className="all-tag">
                 
                 {allTag[0].map((itemTags, index) => (
-                    <div className="oneTag" key={`${index}-${itemTags}`}>
+                    <div className="oneTag" key={`${itemTags}-${index}`}>
                          {itemTags} 
                     </div>
                     
