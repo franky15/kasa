@@ -43,25 +43,3 @@ export default function Gallerie({tableObjet}){
         
     )
 }
-
-/* <div className="button-droit" onClick= {() => 
-                {setIndexImg( nombreimg[0] - 1  > indexImg  ? (indexImg + 1) : 
-                (indexImg - (nombreimg[0] - 1) ) )}
-            }> */
-
-/*<div className="button-gauche" onClick={() => 
-                {setIndexImg( 0  < indexImg  ? (indexImg - 1) : 
-                (indexImg + nombreimg[0] - 1  ) )}}>
-                <img src={button} className="img-gauche" alt="image appartement"/>
-            </div>*/
-
-
-/*nombreimg[0]  > indexImg  ? (indexImg + 1) : 
-                (indexImg - indexImg )*/
-                
-/*<div className="button-droit" onClick= {btnDroit}> 
-                <img src={button} className="img-size" alt="image appartement"/> 
-            </div>
-            <div className="button-gauche" onClick={btnGauche}>
-                <img src={button} className="img-size" alt="image appartement"/>
-            </div>*/

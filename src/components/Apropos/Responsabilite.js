@@ -30,7 +30,7 @@ export default function Responsabilite(){
                         <div className="bloc-elements__bouton">
                             <img  src={button} className="bouton__img"/>
                         </div>
-                </div>
+                </div> 
             )
             }
         

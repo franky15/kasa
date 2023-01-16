@@ -1,36 +1,41 @@
 import React from "react";
 import {data} from "../../Data.js";
-import {useParams} from "react-router-dom"
+import {useParams, Navigate} from "react-router-dom"
 import TagProduit from "./Tag.js";
 import EtoilesProduit from "./Etoiles";
 import Description from "./description.js";
 import Gallerie from "./Gallerie.js";
 import "./FicheProduit.scss";
-import PageErreur from "../PageErreur/PageErreur.js";
+//import PageErreur from "../PageErreur/PageErreur.js";
 
-
+//import { useState } from "react";
 
 
 export default function FicheProduit(){
    
-   let {idUser} = useParams();
-   console.log("valeur du params : " +idUser) //////
+    let idUser = ""
+    idUser = useParams();
+
+    //récupération de la valeur de l'id de l'url
+    let idUrl = ""
+    idUrl = idUser.idUser
+    
+   // console.log( idUser)
+    //let {idUser} = useParams();
+   //console.log("valeur du params : " + idUser.idUser) //////
 
     const table = []
-      
-
-   {data.forEach((product) => product.id == idUser && table.push(product))};
-    console.log("id de la base : " + table[0].id)
-  
-    //const accommodation = data.find((object) => object.id === id);
+    {data.forEach((product) => product.id === idUrl && table.push(product) )};
    
+   //////////////////////////////////
+   const logementFiche = data.find(logement => logement.id === idUrl);
+
 
     return(
-
+        
          <div>
             
-      
-       {table[0].id === idUser ?  (
+            {  logementFiche ?
             <div className="container-ficheProduit">
                 {table.map((produit, index) => (
                     <div className="sous-container-ficheProduit" key = { `${produit}-${index}` }>
@@ -66,20 +71,34 @@ export default function FicheProduit(){
                         </div>
                     </div>
                     ))}
-            </div> )
-            : 
-            (<PageErreur/> ) }
-            
+                     
+            </div> 
+                : < Navigate replace to= "PageErreur" />
+              }
+
         </div>   
+        
         
     )
 }
 
-
+/*
+<div>
+            {console.log("id erroné : " + logement.id )}
+              {logement.id  !== idUrl && <PageErreur/> }
+        </div>
+*/
 
 //////////////////////////
 
 /*
+
+ {table[0].id === idUser ? 
+  
+     : 
+            (<PageErreur/> ) }
+
+////////////////////
 <div>
     {table[0].id === idUser ? 
 
