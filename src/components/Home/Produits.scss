@@ -40,7 +40,7 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-   // border: solid red;
+    //border: solid red;
    /* @include mobile-only{
         
         display: flex;
@@ -65,7 +65,7 @@
     border-radius: 10px;
     position: relative;
     margin-bottom: 50px;
-
+   
    @include tablette-only{
    // border: solid blue;
     width: 45%;

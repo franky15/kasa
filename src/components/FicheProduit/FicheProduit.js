@@ -6,28 +6,22 @@ import EtoilesProduit from "./Etoiles";
 import Description from "./description.js";
 import Gallerie from "./Gallerie.js";
 import "./FicheProduit.scss";
-//import PageErreur from "../PageErreur/PageErreur.js";
-
-//import { useState } from "react";
-
 
 export default function FicheProduit(){
    
+    //récupération de la valeur de l'id de l'url (usepararams() renvoie un objet)
     let idUser = ""
     idUser = useParams();
 
-    //récupération de la valeur de l'id de l'url
+    //stockage de la valeur de l'id de l'url 
     let idUrl = ""
     idUrl = idUser.idUser
-    
-   // console.log( idUser)
-    //let {idUser} = useParams();
-   //console.log("valeur du params : " + idUser.idUser) //////
 
     const table = []
+    ////////récupération du id de la base qui correspond au id de l'url et stockage de id dans la table
     {data.forEach((product) => product.id === idUrl && table.push(product) )};
    
-   //////////////////////////////////
+   ////////récupération du id de la base qui correspond au id de l'url
    const logementFiche = data.find(logement => logement.id === idUrl);
 
 

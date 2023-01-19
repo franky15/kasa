@@ -15,22 +15,13 @@ function App() {
     <div className="App">
      
      <Nav/>
-        <Routes>
-          
-        
-          <Route   path="/" element={<Home/>} />
-          <Route   path="/apropos" element={<Apropos/>} />
-          <Route   path="/produits/:idUser" element={<FicheProduit/>} />
-
-         
-          <Route  path="*" element={<PageErreur/>} /> 
-         
-          
-          
-         
-          
-        </Routes>
-        <Footer/>
+      <Routes>
+        <Route   path="/" element={<Home/>} />
+        <Route   path="/apropos" element={<Apropos/>} />
+        <Route   path="/produits/:idUser" element={<FicheProduit/>} />
+        <Route  path="*" element={<PageErreur/>} /> 
+      </Routes>
+      <Footer/>
 
 
     </div>
