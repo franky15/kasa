@@ -9,13 +9,14 @@ export default function Gallerie({tableObjet}){
     //récupération de la liste des images
      {tableObjet.forEach(item => imgTable.push(item.pictures))}
 
-     //récupération de la taille de la liste des images qui correspond à la quantité ou  ombre d'images
+     //récupération de la taille de la liste des images qui correspond à la quantité ou  nombre d'images
      {imgTable.forEach(item => quantiteImg.push(item.length))}
-    // console.log(quantiteIimg)
+    console.log(quantiteImg)
 
     
     //creation du usestate
     const [numeroImg, setIndexImg] = useState(0)
+    console.log(" numéro img : " + numeroImg)
 
     return(
         
