@@ -11,7 +11,7 @@ export default function Gallerie({tableObjet}){
 
      //récupération de la taille de la liste des images qui correspond à la quantité ou  nombre d'images
      {imgTable.forEach(item => quantiteImg.push(item.length))}
-    console.log(quantiteImg)
+    console.log("  qunatité d'images : " + quantiteImg)
 
     
     //creation du usestate
@@ -22,20 +22,28 @@ export default function Gallerie({tableObjet}){
         
        
         <div className="galery-blocGallerie">
-            <div className="bloc-imgGallerie" style={{backgroundImage: `url(${tableObjet[0].pictures[numeroImg]})`}}>
-                <div className="button-blocGallerie">
-                    <img src={button} className="img-droite" alt="image droite appartement"
-                    onClick= {() => 
-                        {setIndexImg( quantiteImg[0] - 1  > numeroImg ? (numeroImg + 1) : 
-                        (numeroImg - (quantiteImg[0] - 1) ) )}}
-                    /> 
-                    <img src={button} className="img-gauche" alt="image gauche appartement"
-                        onClick={() => 
-                        {setIndexImg( 0  < numeroImg  ? (numeroImg - 1) : 
-                        (numeroImg + quantiteImg[0] - 1  ) )}}
-                    />
-                </div>
-            </div>
+                { quantiteImg[0] === 1 ? 
+                    (
+                        <div className="bloc-imgGallerie" style={{backgroundImage: `url(${tableObjet[0].pictures[numeroImg]})`}}></div>
+                    )
+                        : ( 
+                    <div className="bloc-imgGallerie" style={{backgroundImage: `url(${tableObjet[0].pictures[numeroImg]})`}}>
+                        
+                        <div className="button-blocGallerie">
+                            <img src={button} className="img-droite" alt="buton droite appartement"
+                            onClick= {() => 
+                                {setIndexImg( quantiteImg[0] - 1  > numeroImg ? (numeroImg + 1) : 
+                                (numeroImg - (quantiteImg[0] - 1) ) )}}
+                            /> 
+                            <img src={button} className="img-gauche" alt="buton gauche appartement"
+                                onClick={() => 
+                                {setIndexImg( 0  < numeroImg  ? (numeroImg - 1) : 
+                                (numeroImg + quantiteImg[0] - 1  ) )}}
+                            />
+                        </div>
+                
+                    </div>)
+                }
         </div>
         
     )

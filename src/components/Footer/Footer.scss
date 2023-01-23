@@ -28,13 +28,23 @@
     justify-content: center;
     align-items: center;
     
+    
 }
-.logo{
+.logoFooter{
     
     height: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    
+    @include mobile-only2{
+        
+        position: relative;
+        top: 30px;
+       
+        
+    }
+   
    
 }
 .imgFooter{
@@ -52,8 +62,11 @@
     width: 513px;
     height: 30px;
     @include mobile-only2{
-       // border: solid red;
-        width: 100%;
+        
+        width: 65%;
+        height: 20px;
+        object-fit: contain;
+
         
         
     }

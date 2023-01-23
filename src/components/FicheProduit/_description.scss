@@ -18,16 +18,58 @@
     display: flex;
     justify-content: space-between;
     
-    @include tablette-only{
+  // border: solid red;
+    
+    @include mobile-only() {
+        
+        display: flex;
+        flex-direction: column;
+
 
     }
 
 }
 
+
 .sous-container{
-    width: 47%;
-   
+    width: 100%; //47%
+    display: flex;
+    justify-content: space-between;
+    //border:  solid green;
+
+    @include mobile-only() {
+       
+        //width: 47%; //100%
+    
+    }
 }
+
+//////////////////////
+
+.container-description{
+
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+   //border: solid blue;
+
+   @include mobile-only() {
+    display: flex;
+    flex-direction: column;
+    
+
+    }
+   
+   .container-description-sousconteneur{
+        width: 45%;
+        @include mobile-only() {
+            width: 100%; 
+            
+        
+        }
+   }
+}
+/// ///////////////
 
 
 
@@ -37,6 +79,15 @@
     border-radius: 10px;
     display: flex;
    justify-content: space-between;
+   
+   @include mobile-only() {
+       
+    margin-bottom: 20px;
+
+    }
+   
+    
+
    &__bouton2{
     height: 42px;
     position: relative;
@@ -56,11 +107,20 @@
    
 }
 .bloc2__on-off2{
-    margin-top: -5px;
+    margin-top: -3px;  //-23px
     color: #FF6060;
     background-color: #F6F6F6;
     border: solid #F6F6F6;
     border-radius: 0px 0px 10px 10px;
+
+    @include mobile-only() {
+        margin-top: -22px;
+        margin-bottom: 20px;
+        
+    
+    }
+
+    
 }
 
 .bloc2__description{
@@ -85,8 +145,11 @@
         width: 20px;
     }
 }
+
+
 .change-angle{
     transform: rotate(180deg);
+
 }
 
 

@@ -84,6 +84,14 @@
                 margin-bottom: 20px;
                 font-size: 12px;//20px;
             }
+            @include mobile-only{
+
+               
+                font-weight: 500;
+                font-size: 23px;
+                 
+                
+             }
             
         }
         .location-ficheProduit{

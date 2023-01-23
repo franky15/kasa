@@ -1,5 +1,8 @@
 @import "../components/FicheProduit/description";
 @import "../components/FicheProduit/FicheProduit";
+
+@import "../components/FicheProduit/FonctionDescription";////
+
 @import "../components/FicheProduit/Gallerie";
 @import "../components/FicheProduit/Tag";
 @import "../components/FicheProduit/Etoiles";
@@ -7,5 +10,5 @@
 @import "../components/Footer/Footer";
 @import "../components/Home/Home";
 @import "../components/Nav/Nav";
-@import "../components/Home/Produits"; //@import "../components/Produits/Produits";
+@import "../components/Home/Produits"; 
 @import "../components/Apropos/BannerApropos"; 
