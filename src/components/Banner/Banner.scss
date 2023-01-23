@@ -14,21 +14,30 @@
 .banner-bloc{
    
     width: 89%;
-    height: 150px;
+    height: 250px;
     margin: auto;
+    margin-bottom: 20px;
+
     border-radius: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    margin-top: -30px;
-    margin-bottom: -70px;
+    
+    @include mobile-only{
+        
+        height: 150px;
+        margin-top: -30px;
+       margin-bottom: -70px;
+         
+    }
    
 }
 .bloc-img{
     position: absolute;
     width: 100%;
     height: 250px;
+   // height: 250px;
     border-radius: 25px;
     filter : brightness(50%);
     @include mobile-only{
